@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :edit, :update, :destroy, :game_over]
+  before_action :set_player, only: [:show, :edit, :update, :destroy, :game_over, :game]
   
 
   # GET /players
@@ -11,13 +11,24 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+    
+  end
+
+  def game
     @player.update_record
-    @movies = Movie.set_movies
+    @movies = Movie.set_movies params[:text]
     @right_movie = @movies.sample
   end
 
+  def points_up
+    @player.points_up
+    redirect_to player_path(@player)
+  end
+
+
   def game_over
     @player.game_over
+    render 'game_over'
   end
 
   # GET /players/new
