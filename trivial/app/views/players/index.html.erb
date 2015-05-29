@@ -4,22 +4,20 @@
 <img class="popcorn" src="/imagenes/Palomitas.png">
 
 <div class="container centering">
-  <div class="col-lg-2"></div>
-    <div class="col-lg-8">
       <% @players.each do |player| %>
-        <div class="form-inline input-group">
-          <%= player.name %>      
-          <%= player.points %>
-          <%= player.max_points %>
-        </div>        
         
-        <%= link_to 'Show', player %>
-        <%= link_to 'Edit', edit_player_path(player) %>
-        <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>             
+        <strong><%= player.name %></strong>
+        POINTS: <%= player.points %>
+        MAX. POINTS: <%= player.max_points %>
+        
+        <strong><%= link_to 'Show', player %> |
+        <%= link_to 'Edit', edit_player_path(player) %> |
+        <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></strong> 
+        <br>          
       <% end %>
     </div>
-  <div class="col-lg-2"></div>
 </div>
 
-
-<%= link_to 'New Player', new_player_path %>
+<div class="top">
+  <button class="btn btn-info btn-center"><%= link_to 'New Player', new_player_path %></button>
+</div>

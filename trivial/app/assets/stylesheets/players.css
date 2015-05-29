@@ -7,8 +7,14 @@ body {
 	margin-left: 5rem;
 }
 
+h1 {
+	text-align: center;
+	color: red;
+}
+
 .centering {
 	text-align: center;
+	margin-top: 15rem;
 }
 
 .search { 
@@ -67,4 +73,13 @@ img {
 	opacity: 0.8;
 	position: fixed;
 	z-index: -10;
+}
+
+.btn-center {
+	display: block;
+	margin: auto;
+}
+
+.top {
+	margin-top: 10rem;
 }
