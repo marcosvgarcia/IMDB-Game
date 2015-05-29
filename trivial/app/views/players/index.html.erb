@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Players</h1>
+<img class="popcorn" src="/imagenes/Palomitas.png">
 
 <table>
   <thead>
@@ -26,6 +27,29 @@
   </tbody>
 </table>
 
-<br>
+<div class="container centering">
+  <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <% @players.each do |player| %>
+        <div class="form-inline input-group">
+          <%= player.name %>      
+          <%= player.points %>
+          <%= player.max_points %>
+        </div>        
+        
+        <%= link_to 'Show', player %>
+        <%= link_to 'Edit', edit_player_path(player) %>
+        <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>             
+      <% end %>
+    </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<div class="container centering">
+  <div class="row">
+    <span class="lighter"><input type="text" class="search rounded" placeholder="Search..."></span>
+  </div>
+  <button class="btn btn-info">PLAY</button>
+</div>
 
 <%= link_to 'New Player', new_player_path %>

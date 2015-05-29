@@ -12,7 +12,8 @@ class PlayersController < ApplicationController
   # GET /players/1.json
   def show
     @player.update_record
-    #Movie.set_movies
+    @movies = Movie.set_movies
+    @right_movie = @movies.sample
   end
 
   def game_over

@@ -2,3 +2,51 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+body {
+	margin-left: 5rem;
+}
+
+.centering {
+	text-align: center;
+}
+
+.search { 
+	background: url("./images/search.png") no-repeat 8px 6px; 
+}
+
+.rounded { 
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	-webkit-border-radius:15px; 
+}
+
+.lighter {
+	width:95%;
+	height:50px;
+	background: url("./images/lighter_grey.jpg");
+	display: block;
+	margin: auto;
+}
+
+img {
+	height: 20rem;
+	width: 15rem;
+	position: relative;
+	display: block;
+	margin: auto;
+}
+
+.lion {
+	height: 20rem;
+	width: 35rem;
+}
+
+.popcorn {
+	margin: 1rem;
+	width: 125rem;
+	height: 60rem;
+	opacity: 0.8;
+	position: fixed;
+	z-index: -10;
+}
