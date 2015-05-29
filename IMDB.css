@@ -1,0 +1,21 @@
+header {
+
+}
+
+.search { 
+	background: url("./images/search.png") no-repeat 8px 6px; 
+}
+
+.rounded { 
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	-webkit-border-radius:15px; 
+}
+
+.lighter {
+	width:95%;
+	height:50px;
+	background: url("./images/lighter_grey.jpg");
+	display: block;
+	margin: auto;
+}
