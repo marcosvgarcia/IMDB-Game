@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="IMDB.css">
+
+        <title>IMDB Game</title>
+    </head>
+
+    <body>
+    	<% @players.each do |player| %>
+	    	<div class="container centering">
+	    		<div class="col-lg-2"></div>
+		    	<div class="col-lg-8">
+			    	<form class="form-inline">
+			  			<div class="input-group">
+			   				<%= player.name, class: "input-group-addon" %>			
+			      			<%= player.points, prepend: "Points" %>
+			  			</div>
+					</form>
+				</div>
+				<div class="col-lg-2"></div>
+			</div>
+		<% end %>
+
+		<div class="container centering">
+			<div class="row">
+				<span class="lighter"><input type="text" class="search rounded" placeholder="Search..."></span>
+			</div>
+			<button class="btn btn-info">PLAY</button>
+		</div>
+		
+  			
+
+
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,5 +1,10 @@
-header {
+body {
+	margin-top: 2rem;
+	background-image: url();
+}
 
+.centering {
+	text-align: center;
 }
 
 .search { 
@@ -18,4 +23,17 @@ header {
 	background: url("./images/lighter_grey.jpg");
 	display: block;
 	margin: auto;
+}
+
+img {
+	height: 20rem;
+	width: 15rem;
+	position: relative;
+	display: block;
+	margin: auto;
+}
+
+.lion {
+	height: 20rem;
+	width: 35rem;
 }
