@@ -3,30 +3,6 @@
 <h1>Listing Players</h1>
 <img class="popcorn" src="/imagenes/Palomitas.png">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Points</th>
-      <th>Max Points</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= player.name %></td>
-        <td><%= player.points %></td>
-        <td><%= player.max_points %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <div class="container centering">
   <div class="col-lg-2"></div>
     <div class="col-lg-8">
@@ -45,11 +21,5 @@
   <div class="col-lg-2"></div>
 </div>
 
-<div class="container centering">
-  <div class="row">
-    <span class="lighter"><input type="text" class="search rounded" placeholder="Search..."></span>
-  </div>
-  <button class="btn btn-info">PLAY</button>
-</div>
 
 <%= link_to 'New Player', new_player_path %>
