@@ -1,13 +1,11 @@
 <div class="container centering filter">
-    <div class="row">
-         <span class="lighter"><input type="text" class="search rounded" placeholder="Search..."></span>
-    </div>
-    <button class="btn btn-danger"><%= link_to 'GAME', player_path(@player) %> </button>
+
+	<%= form_tag game_player_path, :method => 'get' do %>
+	    <p>
+	        <%= text_field_tag :text, params[:text] %>
+	        <%= submit_tag 'GAME' , :id => @player.id%>
+	    </p>
+	<% end %>
+
 </div>
 
-<%= form_tag game_player_path, :method => 'get' do %>
-    <p>
-        <%= text_field_tag :text, params[:text] %>
-        <%= submit_tag 'GAME' %>
-    </p>
-<% end %>

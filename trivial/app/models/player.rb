@@ -14,11 +14,17 @@ class Player < ActiveRecord::Base
 		end
 	end
 
+	def record
+    	@@record
+  	end
+
 	def points_up
 		self.points += 1
+		@player.save
 	end
 
 	def game_over
 		self.points = 0
+		@player.save
 	end
 end
